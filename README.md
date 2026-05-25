@@ -1,4 +1,4 @@
-CV Reviewer
+**CV Reviewer**
 An AI-powered CV review tool built with vanilla HTML, CSS, and JavaScript. Paste your CV and get instant feedback including a score out of 100, strengths, weaknesses, a rewritten professional summary, and overall advice for improvement.
 Features
 
@@ -13,7 +13,7 @@ Tech Stack
 Vanilla HTML, CSS, JavaScript
 Groq API (llama-3.3-70b-versatile)
 
-Getting Started
+**Getting Started**
 
 Clone the repo
 Create a config.js file in the root folder:
