@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Reviewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>    
+
+    <header class="header">
+      <div class="header-label">AI-POWERED</div>
+      <h1 class="header-title">CV<span class="accent">.</span>REVIEW</h1>
+      <p class="header-sub">Paste your CV. Get a brutally honest breakdown.</p>
+    </header>
+
+    <main class="main">
+      <!-- INPUT SECTION -->
+      <section class="input-section">
+        <div class="textareora-wrapper">
+          <label class="field-label" for="cv-input">YOUR CV</label>
+          <textarea
+            id="cv-input"
+            class="cv-textarea"
+            placeholder="Paste your full CV here — work experience, skills, education, everything..."
+            spellcheck="false"
+          ></textarea>
+          <div class="char-count" id="char-count">0 characters</div>
+        </div>
+
+        <button class="review-btn" id="review-btn">
+          <span class="btn-text">Analyse CV</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <p id="errMsg"></p>
+      </section>
+
+      <!-- RESULTS SECTION (hidden until Step 3) -->
+      <section class="results-section" id="results-section" hidden>
+        <!-- Score -->
+        <div class="result-card score-card">
+          <div class="card-label">OVERALL SCORE</div>
+          <div class="score-display">
+            <span class="score-number" id="score-number">--</span>
+            <span class="score-denom">/100</span>
+          </div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" id="score-bar"></div>
+          </div>
+        </div>
+
+        <!-- Strengths -->
+        <div class="result-card">
+          <div class="card-label">STRENGTHS</div>
+          <ul class="result-list" id="strengths-list"></ul>
+        </div>
+
+        <!-- Weaknesses -->
+        <div class="result-card">
+          <div class="card-label">WEAKNESSES</div>
+          <ul class="result-list weaknesses" id="weaknesses-list"></ul>
+        </div>
+
+        <!-- Rewritten Summary -->
+        <div class="result-card full-width">
+          <div class="card-label">REWRITTEN SUMMARY</div>
+          <p class="result-text" id="rewritten-summary"></p>
+        </div>
+
+        <!-- Overall Advice -->
+        <div class="result-card full-width advice-card">
+          <div class="card-label">OVERALL ADVICE</div>
+          <p class="result-text" id="overall-advice"></p>
+        </div>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
